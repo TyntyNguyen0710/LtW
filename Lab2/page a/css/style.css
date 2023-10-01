@@ -1,0 +1,243 @@
+body {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    font-family: tahoma, Arisl, sans-serif;
+    width: 1900px;
+}
+
+a, p {
+    font-size: 12px;
+    color: black;
+}
+
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#section_normal_1 {
+    height: 80px;
+    background-color: #ffffff;
+    border-bottom: 4px solid #AFB1B3;
+}
+
+#section_normal_1 .column {
+    margin-top: 20px;
+}
+
+#section_normal_1 .alpha {
+    width: auto;
+    float: left;
+}
+
+#section_normal_1 .omega .pix_text {
+    color: #AAAAAA;
+    float: right;
+    padding-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#section_normal_1 .omega .social_button {
+    float: right;
+    padding-top: 19px;
+    padding-left: 12px;
+    color: #ffffff;
+}
+
+.two-thirds {
+    display: flex;
+    justify-content: right;
+}
+
+#section_normal_4_2 {
+    background: #333333;
+    height: 650px;
+    width: 1900px;
+}
+
+#section_normal_4_2 .alpha {
+    width: 10%;
+    float: left;
+    padding: 85px;
+}
+
+#section_normal_4_2 .omega {
+    width: 50%;
+    float: right;
+    padding: 30px;
+    margin-top: 64px;
+}
+
+#section_normal_4_2 .omega .pix_container {
+    width: 85px;
+    float: left;
+    /*padding:%;*/
+}
+
+
+#section_normal_4_2 .omega .blue_text {
+    font-weight: bold;
+    font-size: 23px;
+    color: #3CB9E3;
+}
+
+#section_normal_4_2 .omega .white_text {
+    color: #ffffff;
+    opacity: 0.9;
+    font-size: 60px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#section_normal_4_2 .omega .light_gray {
+    color: #8c8c8c;
+    opacity: 0.7;
+    line-height: 1.5;
+    margin-bottom: 32px;
+    font-size: 22px;
+}
+
+#section_normal_4_2 .omega .pix_button_flat {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: #2EC0E7;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #fff;
+    border-bottom: 3px solid #2a7083;
+}
+
+#section_normal_6 {
+    overflow: hidden;
+    border-bottom: 4px solid #AFB1B3;
+    background: #EFEEF1;
+    height: 450px;
+}
+
+#section_normal_6 .L1_style {
+    opacity: 0.8;
+    text-align: center;
+    margin-top: 52px;
+    font-size: 31px;
+
+}
+
+#section_normal_6 .logo_style {
+    border-radius: 50%;
+    width: 80px;
+}
+
+#section_normal_6 .L2_style {
+    margin-top: 24px;
+    margin-bottom: 74px;
+    text-align: center;
+    font-size: 20px;
+    color: #AEABAE;
+}
+#section_normal_6 .container-after .alpla-omega{
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#section_normal_6 .container-after .box_1, .box_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section_normal_6 .container-after .alpha {
+    width: 580px;
+    background: #fff;
+    border-radius: 4px;
+    border-bottom: 4px solid #AFB1B3;
+}
+
+#section_normal_6 .container-after .omega {
+    width: 580px;
+    background: #fff;
+    border-radius: 4px;
+    border-bottom: 4px solid #AFB1B3;
+}
+
+#section_normal_6 .b_style {
+    display: inline-block;
+    padding: 23px;
+    background: #F9F4F8;
+}
+
+#section_normal_6 .txt_style {
+    float: right;
+    width: 78%;
+    padding: 20px;
+
+}
+
+#section_normal_6 .txt {
+    opacity: 0.7;
+    margin: 8px 0;
+    line-height: 1.4;
+    font-size: 18px;
+}
+
+#section_normal_6 .stars_span .pix_text {
+    color: #2EC0E7;
+    cursor: pointer;
+}
+
+#section_agency_5 {
+    margin-top: 80px;
+    text-align: center;
+    font-size: 18px;
+    color: #AFB1B3;
+}
+
+#section_agency_5 .f1_style {
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #608E6E;
+}
+
+#section_agency_5 .f2_style {
+    width: 50%;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 48px auto;
+    color: #AFB1B3;
+
+}
+
+#section_agency_5 .second_link {
+    margin-bottom: 60px;
+}
+
+#section_agency_5 .second_link .slow_fade {
+    border: 3px solid #608E6E;
+    font-size: 18px;
+    font-weight: 750;
+    text-decoration: none;
+    padding: 20px 40px;
+    color: #608E6E;
+}
+
+#section_agency_5 .pixfort_st {
+    color: #608E6E;
+    font-weight: bold;
+}
+
+#section_agency_5 .rights_st {
+    margin-bottom: 4px;
+}
+
+#section_agency_5 .pix_inline_block {
+    margin-top: 40px;
+}
+
+#section_agency_5 .social_btn_footer {
+    margin: 44px 2px;
+}
+
