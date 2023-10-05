@@ -1,0 +1,229 @@
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetice, sans-serif;
+    font-size: 13px;
+    color: black;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+#page {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#page .container-1 {
+    display: flex;
+    justify-content: center;
+    width: 1900px;
+    margin: auto;
+    background: #f3f3f3;
+    height: 120px;
+}
+
+#page #section_text_2 .alpha {
+    width: 10%;
+    float: left;
+    text-align: left;
+    padding-top: 35px; /* khoảng cách trong */
+
+}
+
+#page #section_text_2 .alpha .logo {
+    width: 170px;
+}
+
+#page #section_text_2 .omega {
+    width: 60%;
+    float: right;
+    text-align: right;
+    padding-top: 50px;
+}
+
+/* tạo nút button vàng, thẻ a */
+#page #section_text_2 .omega .pix_button {
+    padding: 20px 30px;
+    background: #f77825;
+    color: white;
+    border-radius: 7px;
+    font-weight: bold;
+    text-decoration: none; /* xóa dấu gạch chân */
+    font-size: 15px;
+}
+
+#section_header_1 .containers-1 {
+    display: flex;
+    justify-content: center;
+}
+
+#section_header_1 #navbar-collapse-02 {
+    padding: 250px;
+}
+
+#page #section_header_1 {
+    background: white;
+    height: 100px;
+}
+
+#section_header_1 .containerss{
+    display: flex;
+    justify-content: center;
+}
+
+#page #section_header_1 .right_socials .bottom-icons {
+    display: flex;
+    justify-content: right;
+    padding-right: 250px;
+    font-size: 20px;
+    color: #7f7f7f;
+}
+
+#page #section_header_1 .right_socials ul {
+    text-align: right;
+}
+
+#page #section_header_1 .right_socials ul li {
+    list-style-type: none;
+    float: right;
+    padding-top: 30px;
+    padding-right: 30px;
+    font-size: 150%;
+}
+
+#page #section_header_1 .right_socials ul li a {
+    text-decoration: none;
+    font-size: 100%;
+    color: #898883;
+}
+
+#page #section_header_1 .navbar-collapse {
+    float: left;
+    width: 75%;
+    padding-top: 20px;
+}
+
+#page #section_header_1 .navbar-collapse ul li {
+    list-style-type: none; /* làm mất dấu chấm đầu ảnh */
+    float: left;
+    clear: right;
+    padding-right: 55px; /* khoảng cách */
+
+
+}
+
+#page #section_header_1 .navbar-collapse ul li a {
+    text-decoration: none; /* xóa gạch chân */
+    color: #9e9fa1;
+    font-size: 150%;
+    font-weight: bold;
+
+}
+
+/*  */
+#page #section_slider {
+    background: #eeeeee;
+}
+
+#page #section_slider #myCarousel {
+    background: #eeeeee;
+}
+
+
+/* .......... */
+#page #section_gym_4 {
+    background: white;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    overflow: auto; /* điều chỉnh cao bằng nội dung */
+
+}
+
+#page #section_gym_4 .column {
+    width: 33%;
+    float: right;
+    clear: left;
+    text-align: center; /* đẩy ảnh về giữa */
+}
+
+#page #section_gym_4 .column .img_gym_st .logo_style {
+    width: 250px;
+    border-radius: 50%; /* bo tròn */
+
+}
+
+#page #section_gym_4 .column .gym_st {
+    padding: 20px;
+}
+
+#page #section_gym_4 .column .gym_st span {
+    font-weight: bolder;
+    font-size: 200%;
+}
+
+#page #section_gym_4 .column .gym_text span {
+    font-size: 175%;
+    color: #ddd4bf;
+    line-height: 35px; /* dãn cách hàng */
+}
+
+#page #section_gym_4 .column span .pix_text {
+    padding: 20px 30px;
+    background: #f77825;
+    border-radius: 5px; /* bo góc */
+    color: white;
+    font-weight: bold;
+    text-decoration: none; /* xóa dấu gạch chân */
+    font-size: 150%;
+    display: inline-block;
+    margin-top: 20px; /* cách hàng */
+
+}
+
+#page #section_intro_title {
+    background: grey;
+    font-size: 200%;
+}
+
+#page #section_intro_title .column {
+    float: left;
+    clear: right;
+    text-align: center;
+}
+
+#page #section_intro_title #column .pix_builder_bg {
+    color: red;
+    background: #f77825;
+
+}
+
+#page #section_intro_title #column .pix_builder_bg .editContent {
+    font-size: 200%;
+    color: #35c2e8;
+}
+
+#page #hidden_pix_15 {
+    background: black;
+}
+
+.footer-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.party4-icon {
+    display: inline-block;
+    margin-right: 15px;
+}
+.soc_icons {
+    margin-left: 15px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: right;
+}
