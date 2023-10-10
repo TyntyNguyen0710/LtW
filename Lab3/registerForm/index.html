@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <title>Register Form</title>
+</head>
+<body>
+    <div id="container">
+        <form id="register-form">
+            <div class="account">
+                <label class="title">Account</label>
+                <div class="input-content">
+                    <div class="input-line">
+                        <i class="icon fa fa-user"></i>
+                        <input type="text" placeholder="Full Name" class="input">
+
+                    </div>
+                    <div class="input-line">
+                        <i class="icon fa fa-envelope"></i>
+                        <input type="email" placeholder="Email Adress" class="input">
+
+                    </div>
+                    <div class="input-line">
+                        <i class="icon fa fa-key"></i>
+                        <input type="password" placeholder="Password" class="input">
+
+                    </div>
+                </div>
+                <div class="birth">
+                    <label class="title">Date of Birth</label>
+                    <div class="input-content">
+                        <input type="number" placeholder="DD" class="inp-birth">
+                        <input type="number" placeholder="MM" class="inp-birth">
+                        <input type="number" placeholder="YYYY" class="inp-birth inp-birth-year">
+                    </div>
+
+                </div>
+                <div class="gender">
+                    <label class="title">Gender</label>
+                    <div class="input-content">
+                        <input type="radio" name="buttonGroup" value="one" id="one"><label class="lbmale" for="one">Male</label>
+                        <input type="radio" name="buttonGroup" value="two" id="two"><label class="lbfemale" for="two">Female</label>
+                    </div>
+                </div>
+
+                <div class="payment-details">
+                    <label class="title">Payment Details</label>
+                    <div class="input-content">
+                        <input type="radio" name="buttonGroup1" value="credit" id="credit"><label class="lb-credit" for="credit"><i class="fa fa-credit-card"></i>Credit Card</label>
+                        <input type="radio" name="buttonGroup1" value="paypal" id="paypal"><label class="lb-paypal" for="paypal"><i class="fa fa-paypal"></i>Paypal</label>
+                    </div>
+                    <div class="input-line">
+                        <i class="icon fa fa-credit-card"></i>
+                        <input type="text" placeholder="Card Number" class="input">
+
+                    </div>
+                    <div class="input-line ">
+                        <i class="icon fa fa-user"></i>
+                        <input type="email" placeholder="Card CVC" class="input " style="width: 79%">
+
+                    </div>
+                    <div class="select-date">
+                        <select id="select-day-month" class="select">
+                            <option value="0">01 Jan</option>
+                        </select>
+                        <select id="select-year" class="select">
+                            <option value="0">2015</option>
+                        </select>
+                    </div>
+
+
+                </div>
+                <div class="terms">
+                    <label class="title">Terms and Conditions</label><br>
+                    <div class="input-content">
+                        <input type="checkbox" name="terms" id="terms" > <p class="text-term">I Agree the Terms and Coditions for Singing up to this service and hereby confirm i have read the privacy policy</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>

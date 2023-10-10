@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+body{
+    background: #BBBBBB;
+}
+#container{
+    background: #fff;
+    height: 630px;
+    width: 650px;
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    margin-left: -325px;
+    margin-top: -290px;
+    padding: 32px;
+    border-radius: 10px;
+}
+#container .title-form{
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 32px;
+}
+#middle-form label{
+    padding: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#middle-form .input-box{
+    border: none;
+    padding: 12px;
+    width: 100%;
+    background: #f7f7f7;
+}
+#middle-form .input-box-service{
+    font-weight: bold;
+}
+#middle-form .input-box-message{
+    background: #fff;
+}
+
+#middle-form .form-input{
+    margin: 8px 0;
+    background: #f7f7f7;
+    padding: 4px;
+    border-radius: 8px;
+}
+#middle-form .input-email,
+#middle-form .input-phone{
+    width: 49%;
+    display: inline-block;
+}
+#middle-form .input-phone{
+    float: right;
+}
+#middle-form .input-message{
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-top: 16px;
+}
+#middle-form .sub{
+    width: 100%;
+    padding: 12px;
+    border-radius: 50px;
+    border: none;
+    background: #333;
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+    opacity: 0.9;
+}
+#middle-form .sub:hover{
+    opacity: 1;
+}
+.sub i{
+    margin-left: 8px;
+}
+.input-box:focus{
+    outline: none;
+}

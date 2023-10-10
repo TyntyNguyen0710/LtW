@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.half-colum{
+    width: 50%;
+    float: none;
+}
+
+body{
+    background: #BBBBBB;
+}
+
+i{
+    color: #BBBBBB;
+}
+
+#container{
+    width: 600px;
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    margin-left: -285px;
+    margin-top: -365px;
+    padding: 16px 32px;
+    border-radius: 4px;
+    background: #fff;
+}
+
+#container #register-form .title {
+    color: #7ed321;
+    font-weight: bold;
+}
+
+#container #register-form .input-line{
+    margin: 16px 0;
+}
+
+#container #register-form .input{
+    width: 90%;
+    outline: none;
+    border: 1px solid #cccccc;
+    padding: 18px;
+    height: 50px;
+    float: right;
+    background: #f9f9f9;
+}
+
+#container #register-form .icon{
+    background: #f9f9f9;
+    border: 1px solid #cccccc;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+#container #register-form .birth{
+    width: 49%;
+    float: left;
+}
+
+#container .input-content{
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+#container #register-form .inp-birth{
+    width: 29%;
+    padding: 16px;
+    background: #f9f9f9;
+    border: 1px solid #cccccc;
+    outline: none;
+}
+
+#container #register-form .inp-birth-year{
+    width: 33%;
+}
+
+#container #register-form .gender{
+    width: 46%;
+    float: right;
+}
+#container .gender .input-content{
+    margin-top: 32px;
+}
+
+#container .gender .input-content label{
+    background: #f9f9f9;
+    border: 1px solid #cccccc;
+    color: #AFB1B3;
+    margin: 0 -3px;
+    cursor: pointer;
+}
+
+#container .gender .lbmale{
+    padding: 15px 45px;
+}
+
+#container .gender .lbfemale{
+    padding: 15px 30px;
+}
+
+#container .gender input[type='radio'][name='buttonGroup'],
+#container .payment-details input[type='radio'][name='buttonGroup1']{
+    display:none;
+}
+#container .gender input[type='radio'][name='buttonGroup']:checked + label,
+#container .payment-details input[type='radio'][name='buttonGroup1']:checked + label{
+    background:#7ed321;
+    color: #fff;
+}
+#container .payment-details{
+    width: 100%;
+    float: left;
+}
+#container .payment-details .input-content{
+    margin-top: 32px;
+}
+#container .payment-details .input-content label{
+    background: #f9f9f9;
+    border: 1px solid #cccccc;
+    color: #AFB1B3;
+    margin: 0 -3px;
+    cursor: pointer;
+}
+#container .payment-details .lb-credit{
+    padding:15px 70px ;
+}
+#container .payment-details .lb-paypal{
+    padding: 15px 91px;
+}
+#container .input-content label i{
+    margin-right: 8px;
+}
+#container #register-form .payment-details .input-line .fa-credit-card{
+    margin-top: 0;
+    width: 50px;
+}
+
+#container .payment-details .select-date{
+    display: inline-block;
+    float: right;
+    margin-bottom: 32px;
+}
+#container .payment-details .select{
+    background: #f9f9f9;
+    border: 1px solid #cccccc;
+    margin: 0 -3px;
+    padding: 15.5px 33px;
+    outline: none;
+}
+#container .terms .text-term{
+    width: 96%;
+    float: right;
+    color: #BBBBBB;
+}
+
+
+

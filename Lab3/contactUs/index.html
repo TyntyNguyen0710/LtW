@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+<div>
+    <div id="container">
+        <h3 class="title-form">Contact Us</h3>
+        <form id="middle-form">
+            <div class="form-input input-name">
+                <label>Full name *</label><br>
+                <input name="" type="text" placeholder="Enter Your Name" required class="input-box input-box-name">
+            </div>
+            <div class="form-input input-email">
+                <label>Email *</label><br>
+                <input name="" type="email" placeholder="Enter Your Email" required class="input-box input-box-email">
+            </div>
+            <div class="form-input input-phone">
+                <label>Phone</label><br>
+                <input name="" type="text" placeholder="Enter Number Phone" class="input-box input-box-phone">
+            </div>
+            <div class="form-input input-service">
+                <label>Needed Service *</label><br>
+                <select required class="input-box input-box-service" id="service">
+                    <option name="" disabled selected hidden >Please chooses</option>
+                    <option label="Customer"></option>
+                    <option label="V.I.P"></option>
+                    <option label="Other"></option>
+                </select>
+            </div>
+            <div class="form-input input-message">
+                <label>Message</label><br>
+                <textarea name="message" rows="5" placeholder="Your message here" class="input-box input-box-message"></textarea>
+            </div>
+            <button type="submit" class="sub">Submit<i class="fa fa-arrow-right"></i></button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
