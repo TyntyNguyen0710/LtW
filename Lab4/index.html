@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML-CSS-JS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Bài 1 -->
+<h1>Bài 1: Trang web hiện thị nhiều button với nhiều màu khác nhau, khi nhấn vào nút nào thì màu nền của
+    trang web được đổi theo màu của button đó.
+</h1>
+<button class="color-button" style="background-color: aqua;"></button>
+<button class="color-button" style="background-color: bisque;"></button>
+<button class="color-button" style="background-color: greenyellow;"></button>
+<button class="color-button" style="background-color: yellow;"></button>
+<button class="color-button" style="background-color: white;"></button>
+
+<script>
+    // thay doi nen
+    const colorButtons = document.querySelectorAll('.color-button');
+    const body = document.body;
+
+    colorButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const backgroundColor = button.style.backgroundColor;
+            body.style.backgroundColor = backgroundColor;
+        });
+    });
+</script>
+
+<!-- Bài 2 -->
+<h1 class="bai2">Bài 2: Viết đoạn mã JS thực hiện giải phương trình bậc II với các giá trị a, b, c cho trước. Thông tin
+    về phương
+    trình, kết quả sau khi tính được hiện thị lên trang web.</h1>
+<p>Nhập các hệ số:</p>
+<label for="a">a:</label>
+<input type="number" id="a"><br>
+<label for="b">b:</label>
+<input type="number" id="b"><br>
+<label for="c">c:</label>
+<input type="number" id="c"><br>
+<button onclick="giaiPT()">Kết quả</button>
+<p id="ketqua"></p>
+
+<script>
+    function giaiPT() {
+        // Lấy giá trị a, b, c
+        const a = parseFloat(document.getElementById("a").value);
+        const b = parseFloat(document.getElementById("b").value);
+        const c = parseFloat(document.getElementById("c").value);
+        //Xet gia tri cua a co khac 0?
+        // if (a == 0) {
+        //     alert("Không phải phương trình bậc II!");
+        // } else {
+        // Tính delta
+        const delta = b * b - 4 * a * c;
+        //Xet gia tri cua delta
+        if (delta > 0) {
+            // Phuong trinh co 2 nghiem phan biet
+            const x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            const x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            document.getElementById("ketqua").textContent = `Nghiệm 1: x1 = ${x1}, Nghiệm 2: x2 = ${x2}`;
+        } else if (delta == 0) {
+            // Phuong trinh co nghiem kep
+            const x = -b / (2 * a);
+            document.getElementById("ketqua").textContent = `Nghiệm kép: x = ${x}`;
+        } else {
+            // Vô nghiệm
+            document.getElementById("ketqua").textContent = "Phương trình vô nghiệm";
+        }
+    }
+</script>
+
+<!-- Bài 3 -->
+<h1>Bài 3: Viết đoạn mã HTML, CSS, JS với yêu cầu: hiện thị một lời chào ngẫu nhiên khi mở trang web.</h1>
+<p id="greeting"></p>
+<script>
+    // Chao ngau nhien
+    const greetings = [
+        "Xin chào!",
+        "Welcome to here!",
+        "Hello!",
+        "Nihao!",
+        "Nice to meet you <3"
+    ];
+    // Random loi chao
+    const randomIndex = Math.floor(Math.random() * greetings.length);
+    const randomGreeting = greetings[randomIndex];
+    // Hien loi chao khi mo hoac reload trang
+    const greetingElement = document.getElementById("greeting");
+    greetingElement.textContent = randomGreeting;
+</script>
+
+<!--Bài 4-->
+<h1>Bài 4: Viết đoạn mã HTML, CSS, JS với yêu cầu:</h1>
+<h2>1. Trang web có 3 thành phần: textarea, textfield, button.</h2>
+<h2>2. Textarea cho phép người dung nhập 1 đoạn văn. (A)</h2>
+<h2>3. Textfield cho phép người dung nhập một dòng. (B)</h2>
+<h2>4. Button có khả năng nhấn</h2>
+<h2>5. Khi nhấn button trang web sẽ tính toán số lần xuất hiện của B trong A và hiện thông tin lên trang web.</h2>
+<div id="container">
+    <h1>Số lần xuất hiện của B trong A</h1>
+    <textarea id="textA" placeholder="Nhập đoạn văn (A)"></textarea>
+    <input type="text" id="textB" placeholder="Đoạn văn cần tìm trong đoạn văn ở trên (B)">
+    <button onclick="soLanXuatHien()">Kết quả</button>
+    <p id="turn"></p>
+</div>
+<script>
+    function soLanXuatHien() {
+        // Lấy giá trị của textarea và input
+        const textA = document.getElementById("textA").value;
+        const textB = document.getElementById("textB").value;
+
+        //Khong phan biet viet hoa va viet thuong
+        function chuanHoa(chuoi) {
+            return chuoi.toLowerCase();
+        }
+
+        //Chuan hoa van ban
+        const chuanHoaA = chuanHoa(textA);
+        const chuanHoaB = chuanHoa(textB);
+        // Sử dụng regular expression để tìm số lần xuất hiện của B trong A
+        const count = (chuanHoaA.match(new RegExp(chuanHoaB, 'g')) || []).length;
+        // Hiển thị kết quả lên trang web
+        const turnElement = document.getElementById("turn");
+        turnElement.textContent = `Số lần xuất hiện của đoạn văn B trong đoạn văn A là: ${count}`;
+    }
+</script>
+
+<!--Bài 5-->
+<h1>Bài 5: Viết đoạn mã HTML, CSS, JS với yêu cầu: ở giữa trang web hiện thị một tấm hình, sứ sau 2 giây tấm hình sẽ
+    xoay 15 độ</h1>
+<div id="image-container">
+    <img id="rotate-image" src="z4553238958041_01b466539b553d831bbccc09eb546ba3.jpg"  alt="Hình này đang xoay nha!"><img/>
+</div>s
+<script>
+    function rotateImage() {
+        const image = document.getElementById("rotate-image");
+        let rotation = 0;
+        setInterval(function () {
+            rotation += 15;
+            image.style.transform = `rotate(${rotation}deg)`;
+        }, 2000);
+    }
+    // Gọi hàm xoay tấm hình sau khi trang web tải xong
+    window.onload = rotateImage;
+</script>
+
+<!--Bài 7-->
+<h1>Bài 7: Viết ứng dụng HTML, CSS, JS với yêu cầu như sau:</h1>
+<h2>1. Trang web hiện thị 64 button khác nhau, trên mỗi button có một con số theo thứ tự từ 1 đến 64.</h2>
+<h2>2. Người dùng nhấn chuột vào các button theo thứ tự từ nhỏ tới lớn.
+    Nếu nhấn đúng button bị xóa ngược lại hộp thoại thông báo nhấn sai xuất hiện.</h2>
+<h2>3. Khi một button bị xóa các button khác vẫn giữ nguyên vị trí.</h2>
+<div id="button-container">
+</div>
+<script>
+    const buttonCount = 64;
+    const numbers = Array.from({length: buttonCount}, (_, i) => i + 1);// Chua so luong nut.
+    // Lay nut trong mang.
+    const buttonContainer = document.getElementById("button-container");
+    // Thu tu tang dan.
+    numbers.reverse();
+    // Tao các nut cho vao.
+    numbers.forEach(number => {
+        const button = document.createElement("button");
+        button.className = "number-button";
+        button.textContent = number;
+        button.onclick = () => checkNumber(number);
+        buttonContainer.appendChild(button);
+    });
+    // So ke tiep se nhan.
+    let nextNumber = 1;
+
+    // Kiem tra so da nhan
+    function checkNumber(number) {
+        if (number === nextNumber) {
+            // Khi nhan dung se xoa nut do
+            const button = document.querySelector('.number-button:contains(${number})');
+            button.remove();
+            nextNumber++;
+        } else {
+            alert("Nhấn sai! Vui lòng nhấn theo thứ tự.");
+        }
+    }
+
+    // // contains cho các phần tử
+    // // để tìm button có nội dung chứa số đã cho
+    // Element.prototype.contains = function (number) {
+    //     return this.textContent.includes(number);
+    // };
+</script>
+</body>
+</html>
