@@ -99,7 +99,7 @@
 <h2>3. Textfield cho phép người dung nhập một dòng. (B)</h2>
 <h2>4. Button có khả năng nhấn</h2>
 <h2>5. Khi nhấn button trang web sẽ tính toán số lần xuất hiện của B trong A và hiện thông tin lên trang web.</h2>
-<div id="container">
+<div id="check-text">
     <h1>Số lần xuất hiện của B trong A</h1>
     <textarea id="textA" placeholder="Nhập đoạn văn (A)"></textarea>
     <input type="text" id="textB" placeholder="Đoạn văn cần tìm trong đoạn văn ở trên (B)">
@@ -132,8 +132,10 @@
 <h1>Bài 5: Viết đoạn mã HTML, CSS, JS với yêu cầu: ở giữa trang web hiện thị một tấm hình, sứ sau 2 giây tấm hình sẽ
     xoay 15 độ</h1>
 <div id="image-container">
-    <img id="rotate-image" src="z4553238958041_01b466539b553d831bbccc09eb546ba3.jpg"  alt="Hình này đang xoay nha!"><img/>
-</div>s
+    <img id="rotate-image" src="z4553238958041_01b466539b553d831bbccc09eb546ba3.jpg"
+         alt="Hình này đang xoay nha!"><img/>
+</div>
+s
 <script>
     function rotateImage() {
         const image = document.getElementById("rotate-image");
@@ -143,6 +145,7 @@
             image.style.transform = `rotate(${rotation}deg)`;
         }, 2000);
     }
+
     // Gọi hàm xoay tấm hình sau khi trang web tải xong
     window.onload = rotateImage;
 </script>
@@ -153,43 +156,59 @@
 <h2>2. Người dùng nhấn chuột vào các button theo thứ tự từ nhỏ tới lớn.
     Nếu nhấn đúng button bị xóa ngược lại hộp thoại thông báo nhấn sai xuất hiện.</h2>
 <h2>3. Khi một button bị xóa các button khác vẫn giữ nguyên vị trí.</h2>
-<div id="button-container">
+<div id="container">
+    <span id="suggest"></span>
 </div>
-<script>
-    const buttonCount = 64;
-    const numbers = Array.from({length: buttonCount}, (_, i) => i + 1);// Chua so luong nut.
-    // Lay nut trong mang.
-    const buttonContainer = document.getElementById("button-container");
-    // Thu tu tang dan.
-    numbers.reverse();
-    // Tao các nut cho vao.
-    numbers.forEach(number => {
-        const button = document.createElement("button");
-        button.className = "number-button";
-        button.textContent = number;
-        button.onclick = () => checkNumber(number);
-        buttonContainer.appendChild(button);
-    });
-    // So ke tiep se nhan.
-    let nextNumber = 1;
 
-    // Kiem tra so da nhan
-    function checkNumber(number) {
-        if (number === nextNumber) {
-            // Khi nhan dung se xoa nut do
-            const button = document.querySelector('.number-button:contains(${number})');
-            button.remove();
-            nextNumber++;
-        } else {
-            alert("Nhấn sai! Vui lòng nhấn theo thứ tự.");
-        }
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // tạo ra list 64 phần tử (1->64)
+    const listNum = [];
+    for (let i = 0; i < 64; i++) {
+        listNum[i] = i + 1;
     }
 
-    // // contains cho các phần tử
-    // // để tìm button có nội dung chứa số đã cho
-    // Element.prototype.contains = function (number) {
-    //     return this.textContent.includes(number);
-    // };
+    // random vi tri cac phan tu trong mang
+    function shuffle(array) {
+        var i = array.length,
+            j = 0,
+            temp;
+        while (i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            // swap randomly chosen element with current element
+            temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+        return array;
+    }
+
+    var ranNums = shuffle(listNum); // random cac phần tử trong mảng 64 phần tử
+
+    // tạo ra các button với id, class, value
+    var btnNum = 64;
+    var count = 1;
+    var pageButtons = $('#container');
+    for (var i = 0; i < btnNum; i++) {
+        const button = document.createElement("button");
+        var number = ranNums[i];
+        button.innerText = number;
+        button.id = 'button' + number;
+        button.className = 'btn';
+        button.value = number;
+        document.getElementById('suggest').innerHTML = 'Find: ' + count;
+        // add onclick event
+        button.addEventListener("click", function () {
+            if ((button.value) == count) {
+                button.style.visibility = 'hidden';
+                count++;
+                document.getElementById('suggest').innerHTML = 'Find: ' + count;
+            } else {
+                alert('Không phải  "' + button.value + '"  mà là  "' + count + '"   :>')
+            }
+        })
+        pageButtons.append(button);// add btns vào container
+    }
 </script>
 </body>
 </html>
